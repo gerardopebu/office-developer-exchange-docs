@@ -119,7 +119,8 @@ The following code snippets show how to use the Microsoft Authentication Library
 var pcaOptions = new PublicClientApplicationOptions
 {
     ClientId = ConfigurationManager.AppSettings["appId"],
-    TenantId = ConfigurationManager.AppSettings["tenantId"]
+    TenantId = ConfigurationManager.AppSettings["tenantId"],
+    RedirectUri = "https://login.microsoftonline.com/common/oauth2/nativeclient"
 };
 
 var pca = PublicClientApplicationBuilder
@@ -191,7 +192,8 @@ namespace EwsOAuth
             var pcaOptions = new PublicClientApplicationOptions
             {
                 ClientId = ConfigurationManager.AppSettings["appId"],
-                TenantId = ConfigurationManager.AppSettings["tenantId"]
+                TenantId = ConfigurationManager.AppSettings["tenantId"],
+                RedirectUri = "https://login.microsoftonline.com/common/oauth2/nativeclient"
             };
 
             var pca = PublicClientApplicationBuilder
